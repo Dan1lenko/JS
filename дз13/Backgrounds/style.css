@@ -1,0 +1,22 @@
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  display: none;
+  grid-template-columns: auto auto auto;
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.container div {
+  border: 2px solid black;
+  font-size: 30px;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
