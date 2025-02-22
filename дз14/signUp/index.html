@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <p id="header">Create your account</p>
+      <form name="f1" class="form1">
+        <p>First Name</p>
+        <input id="firstname" placeholder="type here..." type="text" />
+        <p>Second Name</p>
+        <input id="secondname" placeholder="type here..." type="text" />
+        <p>Email</p>
+        <input id="email" placeholder="type here..." type="email" />
+      </form>
+      <form name="f2" class="form2">
+        <input type="radio" name="gender" id="man" />
+        <label for="man">Man</label>
+        <input type="radio" name="gender" id="woman" />
+        <label for="woman">Woman</label>
+      </form>
+      <p id="position2">Position</p>
+      <select name="" id="position">
+        <option value="choose">Choose...</option>
+        <option value="Frontend">Frontend</option>
+        <option value="Backend">Backend</option>
+        <option value="QC/QA">QC/QA</option>
+      </select>
+      <form name="f3" class="form3">
+        <input type="checkbox" name="agree" id="agree" /> &nbsp; I agree to the
+        processing of my personal data
+      </form>
+      <button type="button" name="signUp" id="signUp">SignUp</button>
+    </div>
+    <div class="container2">
+      <div class="header2"><img id="img" src="" /></div>
+      <div class="main">
+        <p id="firstname2"></p>
+        <p id="secondname2"></p>
+        <p id="email2"></p>
+        <p id="position3"></p>
+      </div>
+      <button type="button" name="signOut" id="signOut">SignOut</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

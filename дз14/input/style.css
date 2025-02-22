@@ -1,0 +1,31 @@
+div {
+  margin: 0px auto;
+  width: 70%;
+}
+div p {
+  font-size: 20px;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+}
+form input {
+  width: 300px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+form :nth-child(2) {
+  background-color: coral;
+  color: white;
+  height: 55px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+form :nth-child(2):hover {
+  background-color: rgb(221, 97, 52);
+}
+
+#text {
+  width: 100%;
+}
