@@ -1,35 +1,41 @@
 const getS = (selector) => document.querySelector(selector);
 
+/* start function btn-edit click  */
 getS(".btn-edit").onclick = function () {
   getS(".edit-block").classList.add("show");
   getS(".style-block").classList.remove("show");
-  // const content = getS('.top-block').innerHTML;
-  // getS('.edit-area').value = content;
   getS(".edit-area").value = getS(".top-block").innerHTML;
 };
+/* end function btn-edit click  */
 
+/* start function btn-save click */
 getS(".btn-save").onclick = function () {
   getS(".edit-block").classList.remove("show");
   getS(".top-block").innerHTML = getS(".edit-area").value;
 };
+/* end function btn-save click  */
 
+/* start function btn-style click  */
 getS(".btn-style").addEventListener("click", () => {
   getS(".style-block").classList.add("show");
   getS(".edit-block").classList.remove("show");
 });
+/* end function btn-style click  */
 
+/* start function fontSize change  */
 function fontSize() {
-  // console.log(event.target.value);
   getS(".top-block").style.fontSize = event.target.value;
 }
+/* end function fontSize change  */
 
+/* start function fontFamily change  */
 let fF = document.getElementById("fontFamily");
 fF.onchange = function (e) {
-  // console.log(e.target.value);
-  // console.log(this.value);
   getS(".top-block").style.fontFamily = this.value;
 };
+/* end function fontFamily change  */
 
+/* start function btn-text-color click  */
 let colors = [
   "red",
   "green",
@@ -52,7 +58,9 @@ getS(".btn-text-color").onclick = function () {
   }
   getS(".colors").classList.remove("hide");
 };
+/* end function btn-text-color click  */
 
+/* start function btn-bg-color click  */
 getS(".btn-bg-color").onclick = function () {
   const colorElements = getS(".colors").children;
   for (let i = 0; i < colorElements.length; i++) {
@@ -64,9 +72,9 @@ getS(".btn-bg-color").onclick = function () {
   }
   getS(".colors").classList.remove("hide");
 };
+/* end function btn-bg-color click  */
 
 /* start function bold and cursive style */
-
 getS("#bold").onclick = function () {
   if (getS("#bold").checked) {
     getS(".top-block").style.fontWeight = "bold";
@@ -74,6 +82,7 @@ getS("#bold").onclick = function () {
     getS(".top-block").style.fontWeight = "normal";
   }
 };
+
 getS("#cursive").onclick = function () {
   if (getS("#cursive").checked) {
     getS(".top-block").style.fontStyle = "oblique";
@@ -81,18 +90,18 @@ getS("#cursive").onclick = function () {
     getS(".top-block").style.fontStyle = "normal";
   }
 };
+/* end function bold and cursive style */
 
-/* end function bold style */
-
+/* start function btn-add click  */
 getS(".btn-add").onclick = function () {
   getS(".first").classList.remove("show");
   getS(".second").classList.add("show");
 };
+/* end function btn-add click  */
 
+/* start function btn-create-list click  */
 const list = document.forms["form-list"];
-
 getS(".btn-create-list").onclick = function () {
-  // console.log(list)
   const countLi = list.count.value;
   const typeLi = list.type.value;
   getS(".edit-area").value += `<ul style="list-style-type: ${typeLi}">`;
@@ -100,23 +109,29 @@ getS(".btn-create-list").onclick = function () {
     getS(".edit-area").value += `<li>item ${i + 1}</li>`;
   }
   getS(".edit-area").value += "</ul>";
-  // console.log(countLi,typeLi)
-
   getS(".first").classList.add("show");
   getS(".second").classList.remove("show");
+  list.count.value = "";
+  list.type.value = "circle";
 };
+/* end function btn-create-list click  */
 
+/* start function list radio button click  */
 getS("#list").onclick = function () {
   getS(".create-list").classList.add("show");
   getS(".create-table").classList.remove("show");
 };
+/* end function list radio button click  */
+
+/* start function table radio button click  */
 getS("#table").onclick = function () {
   getS(".create-list").classList.remove("show");
   getS(".create-table").classList.add("show");
 };
+/* end function table radio button click  */
 
+/* start function btn-create-table click  */
 const tableForm = document.forms["form-table"];
-
 getS(".btn-create-table").onclick = function () {
   const countTR = tableForm.countTR.value;
   const countTD = tableForm.countTD.value;
@@ -125,7 +140,6 @@ getS(".btn-create-table").onclick = function () {
   const borderWidth = tableForm.borderWidth.value;
   const borderType = tableForm.type.value;
   const borderColor = tableForm.color.value;
-
   let tableHTML = `<table style="border-collapse: collapse;">`;
   for (let i = 0; i < countTR; i++) {
     tableHTML += `<tr>`;
@@ -138,7 +152,14 @@ getS(".btn-create-table").onclick = function () {
 
   getS(".edit-area").value += tableHTML;
   getS(".top-block").style.height.value += "100px";
-
+  tableForm.countTR.value = "";
+  tableForm.countTD.value = "";
+  tableForm.widthTD.value = "";
+  tableForm.heightTD.value = "";
+  tableForm.borderWidth.value = "";
+  tableForm.type.value = "solid";
+  tableForm.color.value = "black";
   getS(".second").classList.remove("show");
   getS(".first").classList.add("show");
 };
+/* end function btn-create-table click  */
