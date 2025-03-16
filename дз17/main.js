@@ -76,13 +76,6 @@ document.getElementById("reset").addEventListener("click", () => {
   loopsTextarea.value = "";
 });
 
-
-
-
-
-
-
-
 let timerInterval;
 let timerMinutes = 25;
 let timeRemaining = timerMinutes * 60 * 1000;
