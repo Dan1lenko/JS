@@ -71,6 +71,7 @@ getID("check").onclick = function () {
 };
 
 getID("btn").addEventListener("click", function (event) {
+  event.preventDefault();
   let greatDiv = getID("great");
   greatDiv.classList.add("active");
 });
