@@ -70,8 +70,9 @@ getID("check").onclick = function () {
   }
 };
 
-getID("btn").addEventListener("click", () => {
-  getID("great").classList.add("active");
+getID("btn").addEventListener("click", function (event) {
+  let greatDiv = getID("great");
+  greatDiv.classList.add("active");
 });
 
 let buttons = document.getElementsByClassName("button");
