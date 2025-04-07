@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      img {
+        width: 100%;
+        height: 70vh;
+        object-fit: contain;
+        margin: 50px auto;
+      }
+      .block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(38, 196, 32);
+        width: 13%;
+        height: 0px;
+        margin: 0 auto;
+        position: absolute;
+        top: 11%;
+        left: 43%;
+        z-index: -1;
+        border-radius: 10px;
+        transform-origin: bottom;
+      }
+      #text {
+        width: 200px;
+        height: 80px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 20px;
+        position: absolute;
+        top: 35%;
+        left: 44.2%;
+        font-size: 24px;
+      }
+      #first{
+        font-size: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block"></div>
+    <img src="iphone.png" alt="" />
+    <div id="text">
+      <p id="first">2</p>
+      <p>minute</p>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
